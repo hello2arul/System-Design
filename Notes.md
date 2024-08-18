@@ -5,3 +5,5 @@
 ### Misc:
 - https://leetcode.com/discuss/interview-question/system-design/1071562/Design-a-File-Download-Application-System
 - https://medium.com/@mayankbansal933/food-delivery-app-lld-c1409ef49266
+- https://leetcode.com/discuss/interview-question/4861889/Uber-or-Onsite-or-Implement-a-Rate-limiter
+- https://leetcode.com/discuss/interview-question/5049157/Uber-machine-coding
