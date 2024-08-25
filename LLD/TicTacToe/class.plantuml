@@ -1,0 +1,42 @@
+@startuml TicTacToe
+
+class GameManager {
+    -players : Deque<Player>  
+    -board : Board
+    -sc : Scanner
+
+    -initialize() : void
+    +play() : void
+    +main() : void
+}
+
+class Player {
+    -name : String
+    -piece : PlayerType
+    +equals(obj : Object) : boolean
+    +hashCode() : int
+    +toString() : String
+}
+
+class Board {
+    -board : Player[][]
+    -n : int
+    -freeSpaces : int
+
+    +isValidMove() : boolean
+    +hasMovesLeft() : boolean
+    +move() : void
+    +isGameOver() : boolean
+}
+
+enum PlayerType {
+    X
+    O
+}
+
+' Relationships
+GameManager --> "0..*" Player : manages
+GameManager --> Board : manages
+Player --> PlayerType : uses
+
+@enduml
