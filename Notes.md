@@ -1,3 +1,10 @@
+### JWT
+#### Use Cases
+#### Authentication:
+
+1. Login: After a user logs in, the server generates a JWT and sends it to the client.
+Subsequent Requests: The client includes the JWT in the Authorization header of each request to authenticate.
+
 ### Useful resources:
 - https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery
 - https://blog.algomaster.io/p/how-to-answer-a-system-design-interview-problem
