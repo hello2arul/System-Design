@@ -1,3 +1,7 @@
+### Thin vs Thick client
+* In a Thick client architecture, most of the application logic resides on the client device, reducing the server's dependency.
+* On the other hand, thin clients delegate most of the processing tasks to the server, with the client primarily responsible for rendering the user interface and handling user input.
+
 ### JWT
 #### Use Cases
 #### Authentication:
