@@ -486,3 +486,9 @@ console.log(human.think());
 
 ### References:
 - https://fireship.io/lessons/typescript-design-patterns/
+
+### Template Method pattern
+
+![alt text](misc/template%20design%20pattern.png)
+
+https://www.geeksforgeeks.org/template-method-design-pattern/
