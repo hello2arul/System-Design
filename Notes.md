@@ -22,6 +22,18 @@ Subsequent Requests: The client includes the JWT in the Authorization header of 
 - In a pull subscription, a subscriber client requests messages from the Pub/Sub server.
 ### 3. Hybrid
 
+### Consistent hashing
+- Consistent hashing is a special kind of hashing technique such that when a hash table is resized, only 
+n/m keys need to be remapped on average where n is the number of keys and m is the number of slots.
+- In the problem of load balancing, for example, when a BLOB has to be assigned to one of 
+In the problem of load balancing, for example, when a BLOB has to be assigned to one of \( n \) servers on a cluster, a standard hash function could be used in such a way that we calculate the hash value for that BLOB. Assuming the resultant value of the hash is \( \beta \), we perform a modular operation with the number of servers (\( n \) in this case) to determine the server in which we can place the BLOB: \( \zeta = \beta \% n \); hence the BLOB will be placed in the server whose server ID is the successor of \( \zeta \) in this case. However, when a server is added or removed during an outage or scaling (when \( n \) changes), all the BLOBs in every server should be reassigned and moved due to rehashing, but this operation is expensive.
+\(2\pi\) radians. 
+
+- Consistent hashing was designed to avoid the problem of having to reassign every BLOB when a server is added or removed throughout the cluster. The central idea is to use a hash function that maps both the BLOB and servers to a unit circle, usually 
+2
+π
+{\displaystyle 2\pi } radians. For example, \(\zeta = \Phi \% 360\) (where \(\Phi\) is the hash of a BLOB or server's identifier, like IP address or UUID). Each BLOB is then assigned to the next server that appears on the circle in clockwise order. 
+
 ### Useful resources:
 - https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery
 - https://blog.algomaster.io/p/how-to-answer-a-system-design-interview-problem
